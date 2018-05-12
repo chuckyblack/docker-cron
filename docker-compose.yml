@@ -1,0 +1,8 @@
+version: '3'
+services:
+    cron:
+        image: jaromirpufler/docker-cron
+        build: .
+        stop_signal: SIGKILL
+        environment:
+            CRONTAB: "* * * * * echo 'Hello world!'"
